@@ -17,7 +17,7 @@ exec --no-startup-id .screenlayout/layout.sh
 exec --no-startup-id solaar
 #exec --no-startup-id jupyter lab
 exec --no-startup-id numlockx on
-exec --no-startup-id feh --bg-fill dotfiles/wallpapers/planets.png dotfiles/wallpapers/hexagons_1080.jpg dotfiles/wallpapers/vert_planet.jpg
+exec --no-startup-id feh --bg-fill dotfiles/wallpapers/2560x1080-earth.jpg dotfiles/wallpapers/1080-view.jpg dotfiles/wallpapers/vert.jpg
 
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms

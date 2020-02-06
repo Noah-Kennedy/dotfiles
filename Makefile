@@ -4,7 +4,7 @@ i3-desktop: i3/desktop
 dark-shiv-i3: i3/dark-shiv
 	cp i3/dark-shiv ~/.config/i3/config
 
-polybar-desktop: polybar/desktop polybar/desktop.sh
+polybar-desktop:
 	mkdir -p ~/.config/polybar
 	cp polybar/desktop ~/.config/polybar/config
 	cp polybar/launch.sh ~/.config/polybar/launch.sh
