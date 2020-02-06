@@ -8,6 +8,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 let g:deoplete#enable_at_startup = 1
 
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -32,3 +33,18 @@ let g:airline_theme='deep_space'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RACER
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set hidden
+let g:racer_cmd = "/home/noah/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:racer_insert_paren = 1
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap gt <Plug>(rust-def-tab)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
+
