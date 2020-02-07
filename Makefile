@@ -1,18 +1,18 @@
-i3-desktop: i3/desktop
-	cp i3/desktop ~/.config/i3/config
+broadsword-i3: i3/broadsword
+	cp i3/broadsword ~/.config/i3/config
 
-dark-shiv-i3: i3/dark-shiv
-	cp i3/dark-shiv ~/.config/i3/config
+shiv-i3: i3/shiv
+	cp i3/shiv ~/.config/i3/config
 
-polybar-desktop:
+broadsword-polybar:
 	mkdir -p ~/.config/polybar
-	cp polybar/desktop ~/.config/polybar/config
-	cp polybar/desktop.sh ~/.config/polybar/launch.sh
+	cp polybar/broadsword ~/.config/polybar/config
+	cp polybar/broadsword.sh ~/.config/polybar/launch.sh
 
-dark-shiv-polybar: polybar/dark-shiv polybar/dark-shiv.sh
+shiv-polybar: polybar/shiv polybar/shiv.sh
 	mkdir -p ~/.config/polybar
-	cp polybar/dark-shiv ~/.config/polybar/config
-	cp polybar/dark-shiv.sh ~/.config/polybar/launch.sh
+	cp polybar/shiv ~/.config/polybar/config
+	cp polybar/shiv.sh ~/.config/polybar/launch.sh
 
 
 nvim: init.vim
@@ -21,6 +21,17 @@ nvim: init.vim
 zshrc: .zshrc
 	cp .zshrc ~/.zshrc
 
-desktop: nvim polybar-desktop i3-desktop zshrc
+alacritty: alacritty.yml
+	cp alacritty.yml ~/.config/alacritty/alacritty.yml
 
-dark-shiv: nvim dark-shiv-polybar dark-shiv-i3 zshrc
+compton: compton.conf
+	cp compton.conf ~/.config/compton.conf
+
+xresources: .Xresources
+	cp .Xresources ~/.Xresources
+
+generic: nvim zshrc alacritty compton xresources 
+
+broadsword: generic broadsword-polybar broadsword-i3
+
+shiv: generic shiv-polybar shiv-i3
