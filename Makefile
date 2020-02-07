@@ -7,7 +7,7 @@ dark-shiv-i3: i3/dark-shiv
 polybar-desktop:
 	mkdir -p ~/.config/polybar
 	cp polybar/desktop ~/.config/polybar/config
-	cp polybar/launch.sh ~/.config/polybar/launch.sh
+	cp polybar/desktop.sh ~/.config/polybar/launch.sh
 
 dark-shiv-polybar: polybar/dark-shiv polybar/dark-shiv.sh
 	mkdir -p ~/.config/polybar
