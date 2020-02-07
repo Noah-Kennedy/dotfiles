@@ -7,6 +7,8 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar, using default desktop location ~/.desktop/polybar/desktop
-polybar example &
+polybar left &
+polybar right &
+polybar center &
 
 echo "Polybar launched..."
