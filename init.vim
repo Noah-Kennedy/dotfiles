@@ -93,3 +93,4 @@ au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap gt <Plug>(rust-def-tab)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
+set ts=4 sw=4
